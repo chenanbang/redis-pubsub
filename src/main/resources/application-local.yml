@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    application-display-name: redis-pubsub
+  tomcat:
+    manager.enable: true
+    manager.context-path: 'D:\apache-tomcat-8.5.31\webapps\manager'
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 3600ms #超时时间
+    lettuce:
+      pool:
+        max-active: 8 #最大连接数
+        max-idle: 8 #最大空闲连接 默认8
+        max-wait: -1ms #默认-1 最大连接阻塞等待时间
+        min-idle: 0 #最小空闲连接
